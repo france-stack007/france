@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Dashboard</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="css/fullcalendar.css"/>
+    <link rel="stylesheet" href="css/matrix-style.css"/>
+    <link rel="stylesheet" href="css/matrix-media.css"/>
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/jquery.gritter.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<div id="header">
+
+    <h2 style="color: white;position: absolute">
+        <a href="demo_admin.php" style="color:white; margin-left: 30px; margin-top: 40px">Dashboard</a>
+    </h2>
+</div>
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+    <ul class="nav">
+        <li class="dropdown" id="profile-messages">
+            <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i
+                    class="icon icon-user"></i> <span class="text" >Welcome Admin</span><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+                <li class="divider"></li>
+                <li><a href="index_admin.php"><i class="icon-key"></i> Log Out</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--sidebar-menu-->
+
+<div id="sidebar">
+    <ul>
+        <li class="active">
+            <a href="demo_admin.php"><i class="icon icon-home"></i><span>Dashboard</span></a>
+        </li>
+        <li>
+            <a href="add_new_user.php"><i class="icon icon-user"></i><span>Add New User</span></a>
+        </li>
+
+        <li class="submenu"><a href="#"><i class="icon icon-th-list"></i><span>Customize Home</span> <span
+                class="label label-important">2</span></a>
+            <ul>
+                <li><a href="home_images.php">Update Home Image</a></li>
+                <li><a href="home_content.php">Update Home Content</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+<!--sidebar-menu-->
+<div id="search">
+        <a href="index_admin.php" style="color:white"><i class="icon icon-share-alt"></i><span>LogOut</span></a>
+</div>
