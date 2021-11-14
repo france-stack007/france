@@ -1,0 +1,121 @@
+/*POPUP START*/
+.popup{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-content{
+    height: auto;
+    width: 800px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popIn{
+    margin: 20px auto;
+    background-color: rgba(0, 128, 0, 0.1);
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.popup-1{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-content-1{
+    height: auto;
+    width: 900px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popIn-1{
+    margin: 20px auto;
+    display: block;
+    background-color: rgba(0, 128, 0, 0.1);
+    width: 80%;
+    padding: 8px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.popup-2{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-content-2{
+    height: auto;
+    width: 850px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popIn-2{
+    margin: 20px auto;
+    background-color: rgba(0, 128, 0, 0.1);
+    display: block;
+    width: 80%;
+    padding: 8px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.regB{
+    margin-top: 0px;
+}
+.closeB, .loginB, .registerB, .resetB-1, .forB-2{
+    color: green;
+	background: white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px 20px;
+	margin: 20px;
+	border-radius: 20px;
+	border: 2.5px solid green;
+}
+.closeB:hover, .loginB:hover, .registerB:hover, .resetB-1:hover, .forB-2:hover{
+    background-color: green;
+    border: 2.5px solid white;
+    color: white;
+}

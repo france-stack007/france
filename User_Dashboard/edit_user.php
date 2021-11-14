@@ -106,7 +106,6 @@ while($row=mysqli_fetch_array($res))
 </div>
 
 <?php
-
 if(isset($_POST["update1"]))
 {
     $tm=md5(time());
