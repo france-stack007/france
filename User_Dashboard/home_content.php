@@ -141,7 +141,7 @@
             } else {
                 tr[i].style.display = "none";
                 }
-            }       
+            }
         }
     }
 </script>
@@ -158,7 +158,6 @@ if(isset($_POST["submit1"]))
         }, 3000);
     </script>
     <?php
-    
 }
 ?>
 </div>

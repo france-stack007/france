@@ -153,7 +153,8 @@ while($row=mysqli_fetch_array($res))
                         if($count>0){
                             ?>
                             <script type="text/javascript">
-                                window.location="demo_admin.php";
+                                //window.location="demo_admin.php";
+                                window.open("dash_body.php", '_blank') || window.location.replace("dash_body.php");
                             </script>
                             <?php
                             echo $count;
@@ -317,7 +318,7 @@ while($row=mysqli_fetch_array($res))
                                     setTimeout(function(){
                                         popup1.style.display = "flex";
                                     },800)
-                                        
+                                    
                                 }
                                 //setTimeout("location.reload(true);",1000);
                             </script>
@@ -484,7 +485,7 @@ while($row=mysqli_fetch_array($res))
                  <form>
                   <div class="row">
                    <div class="col-lg-4 col-md-4 col-sm-12">
-                     <h1>Get in Touch</h1> 
+                     <h1 style="color: green;">Get in Touch</h1> 
                    </div>
                    <div class="col-lg-8 col-md-8 col-sm-12 right">
                       <div class="form-group">
@@ -497,7 +498,7 @@ while($row=mysqli_fetch_array($res))
                         <textarea class="form-control form-control-lg">
                         </textarea>
                       </div>
-                      <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+                      <input type="submit" class="btn4" value="Send" name="">
                    </div>
                   </div>
                  </form>
@@ -923,7 +924,20 @@ article {
 	border: 2.5px solid green;
 	cursor: pointer;
 }
-.btn1:hover, .btn2:hover, .btn3:hover{
+.btn4{
+    color: green;
+	background: white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px 20px;
+    width: 400px;
+	margin: 20px;
+    margin-left: 90px;
+	border-radius: 20px;
+	border: 2.5px solid green;
+	cursor: pointer;
+}
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover{
     background-color: green;
     border: 2.5px solid white;
     color: white;

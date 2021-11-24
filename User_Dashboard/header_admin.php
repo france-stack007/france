@@ -58,7 +58,6 @@
                 <li><a href="home_content.php">Update Home Content</a></li>
             </ul>
         </li>
-
     </ul>
 </div>
 <!--sidebar-menu-->
