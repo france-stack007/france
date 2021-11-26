@@ -20,7 +20,6 @@ include "connection.php";
             </li>
         </ul>
 </nav>
-
 <div class="parentCon">
     <div class="container-fluid">
         <div class="row">
@@ -49,7 +48,7 @@ include "connection.php";
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dash_farmers_request.php" style="color: green">
+                        <a class="nav-link" href="dash_farmers_request.php" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
@@ -73,7 +72,7 @@ include "connection.php";
                         Approved Panel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dash_add_farmer.php">
+                        <a class="nav-link" href="dash_add_farmer.php" style="color: green">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
@@ -108,75 +107,149 @@ include "connection.php";
     </div>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-    <div class="printGrp" style="display: flex; flex-direction: row; gap: 20px; justify-content: flex-end; border: 2px solid green;
-         padding: 15px 0 0 0; flex-wrap: wrap; background-color: rgba(0, 128, 0, 0.2)">
-         <h3 style="margin: 0 220px 0 0">Farmers List</h3>
-            <div>
-                <label for="middlename">Program: </label>
-                   <input class="inputC" type="text" name="middlename" placeholder="Program" required>
+    <div class="popup3" style="background-color: rgba(0,128,0, 0.2); padding: 20px; border-radius: 2em; margin: 0 0 20px 0">
+            <div class="popup-content3">
+                <div class="popup-child1-3" style="display: flex; flex-direction: column; flex-wrap: wrap;">
+                    <h1>Create Farmers Account</h1>
+                    <hr style="width: 400px; background: black; border: 2px solid black; border-radius: 1em; margin-left: 35px">
+                    <label for="selectD">Register for </label>
+                    <select class="selectD" style="width: 100%; height: auto; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px">
+                        <option selected>Choose Services</option>
+                        <option value="1">High Value Crop</option>
+                        <option value="2">Rice Crop</option>
+                        <option value="2">Corn</option>
+                    </select>
+                        <div class="inputG" style="display: flex; gap: 20px; justify-content: space-evenly; flex-wrap: wrap">
+                            <div>
+                            <label for="surname">Lastname</label>
+                                <input class="inputC" type="text" name="surname" placeholder="Surname" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Firstname </label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Firstname" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Middlename</label>
+                                <input class="inputC" type="text" name="middlename" placeholder="Middlename" required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex; gap: 20px; justify-content: space-evenly; flex-wrap: wrap">
+                            <div>
+                            <label for="surname">Stree/Subdiv/Sitio </label>
+                                <input class="inputC" type="text" name="surname" placeholder="Stree/Subdiv/Sitio" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Barangay</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Barangay" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Municipality</label>
+                                <input class="inputC" type="text" name="middlename" placeholder="Municipality" required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex; gap: 20px; justify-content: space-evenly; flex-wrap: wrap">
+                            <div>
+                            <label for="surname">Province </label>
+                                <input class="inputC" type="text" name="surname" placeholder="Province" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Zipcode</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Zipcode" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Contact No.</label>
+                                <input class="inputC" type="number" name="middlename" placeholder="Contact No." required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex; gap: 20px; justify-content: space-evenly; flex-wrap: wrap">
+                            <div>
+                            <label for="surname">Place of Birth</label>
+                                <input class="inputC" type="text" name="surname" placeholder="Place of Birth" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Civil Status</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Civil Status" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Region</label>
+                                <input class="inputC" type="text" name="middlename" placeholder="Region" required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex; justify-content: space-evenly; flex-wrap: wrap">
+                            <div class="inputC">
+                                <label for="start">Date of Birth</label>
+                                <input type="date" id="start" name="trip-start"
+                                    value="2000-01-01"
+                                    min="1900-01-01" max="2050-12-31" class="inputC">
+                            </div>
+                            <div class="inputC">
+                            <label for="selectD">Sex</label>
+                            <select class="inputC">
+                                <option selected>Choose Sex</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+
+                        <div class="inputG" style="display: flex; gap: 20px; justify-content: space-evenly; flex-wrap: wrap">
+                            <div>
+                            <label for="surname">Province </label>
+                                <input class="inputC" type="text" name="surname" placeholder="Province" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Zipcode</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Zipcode" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Contact No.</label>
+                                <input class="inputC" type="number" name="middlename" placeholder="Contact No." required>
+                            </div>
+                        </div>
+                        
+                        <div class="inputG" style="display: flex; gap: 20px; justify-content: space-evenly; flex-wrap: wrap">
+                            <div>
+                            <label for="surname">Province </label>
+                                <input class="inputC" type="text" name="surname" placeholder="Province" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Zipcode</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Zipcode" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Contact No.</label>
+                                <input class="inputC" type="number" name="middlename" placeholder="Contact No." required>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-child2-3" style="display: flex; justify-content: center; flex-wrap: wrap">
+                    <button class="btn btn-success" style="width: 70%">Submit</button>
+                </div>
             </div>
-            <div>
-                <label for="middlename">Search name: </label>
-                   <input class="inputC" type="text" name="middlename" placeholder="Search name" required>
-            </div>
-            <div style="margin: 0 10px 20px 0">
-                <label for="middlename">Barangay: </label>
-                   <input class="inputC" type="text" name="middlename" placeholder="Barangay" required>
-            </div>
-        </div>
-        <hr>
-        <div class="table-responsive">
-            <table class="table table-hover table-sm" id="tableSearch">
-                <thead>
-                    <tr>
-                    <th>No.</th>
-                    <th>Image</th>
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Middle Name</th>
-                    <th>Sex</th>
-                    <th>Commodity</th>
-                    <th>Size(HA)</th>
-                    <th>Barangay</th>
-                    <th>Contact Number</th>
-                    <th></th>
-                    <th></th>
-                    <!-- <th>Username</th>
-                    <th>Password</th>
-                    <th>Role</th>
-                    <th>Status</th> -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    $res=mysqli_query($link,"SELECT * FROM user_registration");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                            echo "<tr>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; ?> <img src="<?php echo $row["image"]; ?>" height="100" width="100"> <?php echo "</td>";
-                            echo "<td>"; echo $row["lastname"]; echo "</td>";
-                            echo "<td>"; echo $row["firstname"]; echo "</td>";
-                            //echo "<td>"; echo $row["username"]; echo "</td>";
-                            //echo "<td>"; echo $row["password"]; echo "</td>";
-                            //echo "<td>"; echo $row["role"]; echo "</td>";
-                            //echo "<td>"; echo $row["status"]; echo "</td>";
-                            echo "<td>"; echo $row["username"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-success">Accept</button> <?php echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-danger">Decline</button> <?php echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-info">Feedback</button> <?php echo "</td>";
-                            echo "</tr>";
-                    }
-                    ?>
-                </tbody>
-            </table>
         </div>
     </main>
+<style>
+.inputC{
+    width: 100%; 
+    height: auto; 
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+label {
+    display: block;
+    font-weight: 200;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+input, label {
+    margin: .4rem 0;
+}
+</style>
 </div>
 
 <?php

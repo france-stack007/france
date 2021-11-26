@@ -23,7 +23,6 @@
 <style>
 /*SIDEBAR END*/
 /*POPUP START*/
-
 .popup{
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
@@ -32,6 +31,7 @@
     top: 0;
     display: none;
     flex-wrap: wrap;
+    flex-wrap: ;
     justify-content: center;
     align-items: center;
     text-align: center;

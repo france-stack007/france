@@ -33,9 +33,9 @@ while($row=mysqli_fetch_array($res))
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">-->
 <body>
-    
     <header>
         <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
             <div class="container">
@@ -46,13 +46,12 @@ while($row=mysqli_fetch_array($res))
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Ayala Agriculture</a>
+                    <a class="navbar-brand" href="#">Ayala | Agriculturist</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Users</a></li>
                         <li><a href="#aboutUs">About us</a></li>
                         <li><a href="#" id="request">Request</a></li>
                         <li><a href="#home">Home</a></li>
@@ -61,7 +60,7 @@ while($row=mysqli_fetch_array($res))
                             <div class="dropdown-content">
                               <a href="#" id="farmer" class="farmer">Farmer</a>
                               <a href="#" id="personnel" class="personnel">Personnel</a>
-                              <a href="index_admin.php" class="admin">Admin</a>
+                              <a href="#" id="admin" class="admin">Admin</a>
                             </div>
                         </div>
                     </ul>
@@ -83,7 +82,7 @@ while($row=mysqli_fetch_array($res))
                     <div class="carousel-caption">
                         <h2 class="animated slideInDown" style="animation-delay: 1s"><span><?php echo $content11;?></span></h2>
                         <h3 class="animated fadeInUp" style="animation-delay: 2s"><?php echo $content12;?></h3>
-                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#contact">Contact us</a></p>
                     </div>
                 </div>
                     
@@ -92,7 +91,7 @@ while($row=mysqli_fetch_array($res))
                     <div class="carousel-caption">
                         <h2 class="animated slideInDown" style="animation-delay: 1s"><span><?php echo $content21;?></span></h2>
                         <h3 class="animated fadeInUp" style="animation-delay: 2s"><?php echo $content22;?></h3>
-                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#contact">Contact us</a></p>
                     </div>
                 </div>
                 
@@ -101,7 +100,7 @@ while($row=mysqli_fetch_array($res))
                     <div class="carousel-caption">
                         <h2 class="animated zoomIn" style="animation-delay: 1s"><span><?php echo $content31;?></span></h2>
                         <h3 class="animated fadeInLeft" style="animation-delay: 2s"><?php echo $content32;?></h3>
-                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#contact">Contact us</a></p>
                     </div>
                 </div>
             </div>
@@ -139,6 +138,7 @@ while($row=mysqli_fetch_array($res))
                     <!--<a href="" class="loginB" id="loginB" style="position: relative; text-decoration: none; z-index: 1" name="login">LOGIN</a>-->
                     <input class="loginB" id="loginB" type="submit" name="login" value="LOGIN">
                     <!--<button class="loginB" id="loginB" type="submit" name="login" class="btn btn-success">Login</button>-->
+                    <a type="button" href="" id="closeB" class="btn btn-success" style="position:absolute; top:0; right:0; text-decoration: none; z-index: 1; cursor: pointer; border-radius: 5em">X</a>
                     <a href="" class="closeB" id="closeB" style="position: relative; text-decoration: none; z-index: 1; cursor: pointer">CLOSE</a>
                 </form>
                 <?php
@@ -154,7 +154,7 @@ while($row=mysqli_fetch_array($res))
                             ?>
                             <script type="text/javascript">
                                 //window.location="demo_admin.php";
-                                window.open("dash_body.php", '_blank') || window.location.replace("dash_body.php");
+                                window.open("farmers_dash_body.php", '_blank') || window.location.replace("farmers_dash_body.php");
                             </script>
                             <?php
                             echo $count;
@@ -181,12 +181,140 @@ while($row=mysqli_fetch_array($res))
                 <img src="./img/Image.png" width="380" height="280" style="border-radius: 0.6em">
                 <div class="regB">
                     <hr>
-                    <label for="registerB">Don't have an account?</label>
-                    <a href="" class="registerB" id="registerB" style="text-decoration: none; margin-bottom: 20px">Register</a>
+                    <!-- <label for="registerB" style="font-w">Don't have an account?</label> -->
+                    <h5 for="registerB" style="cursor: pointer; font-weight: bolder; margin-bottom: 20px">Don't have an account?</h5>
+                    <a href="#" class="registerB" id="registerB" style="text-decoration: none; margin-bottom: 20px">Register</a>
                 </div>
             </div>
         </div>
     </div>
+<!-- Popup Login Personnel -->
+    <div class="popupPer">
+        <div class="popup-contentPer">
+            <div class="popup-child1" style="margin-bottom: 5px">
+                <h1>Welcome Back!</h1>
+                <p>Login to continue your personnels account.</p>
+                <form name="form" action="#" method="post" autocomplete="off">
+                    <div class="input-box">
+                        <i class="fas fa-envelope"></i><input type="text" placeholder="Username" class="popIn" name="username" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-key"></i><input type="password" placeholder="Password" class="popIn" name="password" id="inPassPer" required>
+                        <span class="eye" onclick="myFunctionPer()">
+                            <i id="hidePer1" class="fas fa-eye" style="cursor: pointer"></i>
+                            <i id="hidePer2" class="fas fa-eye-slash" style="cursor: pointer"></i>
+                        </span>
+                    </div>
+                    <hr style="margin-top: 34px;">
+                    <!--<a href="" class="loginB" id="loginB" style="position: relative; text-decoration: none; z-index: 1" name="login">LOGIN</a>-->
+                    <input class="loginPer" id="loginPer" type="submit" name="loginPer" value="LOGIN">
+                    <!--<button class="loginB" id="loginB" type="submit" name="login" class="btn btn-success">Login</button>-->
+                    <a type="button" href="" id="closeB" class="btn btn-success" style="position:absolute; top:0; right:0; text-decoration: none; z-index: 1; cursor: pointer; border-radius: 5em">X</a>
+                    <a href="" class="closeB" id="closeB" style="position: relative; text-decoration: none; z-index: 1; cursor: pointer">CLOSE</a>
+                </form>
+                <?php
+                    if(isset($_POST["loginPer"]))
+                    {
+                        $username=mysqli_real_escape_string($link, $_POST["username"]);
+                        $password=mysqli_real_escape_string($link, $_POST["password"]);
+                    
+                        $count=0;
+                        $res=mysqli_query($link,"SELECT * FROM user_registration WHERE username='$username' && password='$password' && role='admin' && status='active'");
+                        $count=mysqli_num_rows($res);
+                        if($count>0){
+                            ?>
+                            <script type="text/javascript">
+                                //window.location="demo_admin.php";
+                                window.open("dash_body.php", '_blank') || window.location.replace("dash_body.php");
+                            </script>
+                            <?php
+                            echo $count;
+                        }
+                        else{
+                            ?>
+                            <div class="alert alert-danger" style="margin-top: 10px">
+                                <strong>Warning!</strong> Invalid username or password.
+                                <script type="text/javascript">
+                                    const popupPer = document.querySelector('.popupPer');
+                                    window.onload = function(){
+                                    setTimeout(function(){
+                                        popupPer.style.display = "flex";
+                                        }, 1000)
+                                    }
+                                </script>
+                            </div>
+                            <?php
+                        }
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Login Personnel End -->
+
+<!-- Popup Login Admin -->
+<div class="popupAd">
+        <div class="popup-contentAd">
+            <div class="popup-child1" style="margin-bottom: 5px">
+                <h1>Welcome Back!</h1>
+                <p>Login to continue your admins account.</p>
+                <form name="form" action="#" method="post" autocomplete="off">
+                    <div class="input-box">
+                        <i class="fas fa-envelope"></i><input type="text" placeholder="Username" class="popIn" name="username" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fas fa-key"></i><input type="password" placeholder="Password" class="popIn" name="password" id="inPassAd" required>
+                        <span class="eye" onclick="myFunctionAd()">
+                            <i id="hideAd1" class="fas fa-eye" style="cursor: pointer"></i>
+                            <i id="hideAd2" class="fas fa-eye-slash" style="cursor: pointer"></i>
+                        </span>
+                    </div>
+                    <hr style="margin-top: 34px;">
+                    <!--<a href="" class="loginB" id="loginB" style="position: relative; text-decoration: none; z-index: 1" name="login">LOGIN</a>-->
+                    <input class="loginAd" id="loginAd" type="submit" name="loginAd" value="LOGIN">
+                    <!--<button class="loginB" id="loginB" type="submit" name="login" class="btn btn-success">Login</button>-->
+                    <a type="button" href="" id="closeB" class="btn btn-success" style="position:absolute; top:0; right:0; text-decoration: none; z-index: 1; cursor: pointer; border-radius: 5em">X</a>
+                    <a href="" class="closeB" id="closeB" style="position: relative; text-decoration: none; z-index: 1; cursor: pointer">CLOSE</a>
+                </form>
+                <?php
+                    if(isset($_POST["loginAd"]))
+                    {
+                        $username=mysqli_real_escape_string($link, $_POST["username"]);
+                        $password=mysqli_real_escape_string($link, $_POST["password"]);
+                    
+                        $count=0;
+                        $res=mysqli_query($link,"SELECT * FROM user_registration WHERE username='$username' && password='$password' && role='admin' && status='active'");
+                        $count=mysqli_num_rows($res);
+                        if($count>0){
+                            ?>
+                            <script type="text/javascript">
+                                //window.location="demo_admin.php";
+                                window.open("admin_dash_body.php", '_blank') || window.location.replace("admin_dash_body.php");
+                            </script>
+                            <?php
+                            echo $count;
+                        }
+                        else{
+                            ?>
+                            <div class="alert alert-danger" style="margin-top: 10px">
+                                <strong>Warning!</strong> Invalid username or password.
+                                <script type="text/javascript">
+                                    const popupAd = document.querySelector('.popupAd');
+                                    window.onload = function(){
+                                    setTimeout(function(){
+                                        popupAd.style.display = "flex";
+                                        }, 1000)
+                                    }
+                                </script>
+                            </div>
+                            <?php
+                        }
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Login Admin End -->
 
     <!-- POPUP RESET PASSWORD -->
     <div class="popup-1">
@@ -348,6 +476,139 @@ while($row=mysqli_fetch_array($res))
             </div>
         </div>
     </div>
+ <!-- Registration Form -->
+        <div class="popup3">
+            <div class="popup-content3">
+                <div class="popup-child1-3" style="display: flex; flex-direction: column; flex-wrap: wrap;">
+                    <h1>Sign Up?</h1><h3 class="xB-3" id="xB-3" style="position: absolute; top: 0px; right: 20px; cursor: pointer">X</h3>
+                    <hr style="width: 100px; background: green; border: 2px solid green; border-radius: 1em">
+                    <label for="selectD">Register for </label>
+                    <select class="selectD" style="width: 100%; height: auto; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px">
+                        <option selected>Choose Services</option>
+                        <option value="1">High Value Crop</option>
+                        <option value="2">Rice Crop</option>
+                        <option value="2">Corn</option>
+                    </select>
+                        <div class="inputG" style="display: flex">
+                            <div>
+                            <label for="surname">Lastname</label>
+                                <input class="inputC" type="text" name="surname" placeholder="Surname" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Firstname </label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Firstname" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Middlename</label>
+                                <input class="inputC" type="text" name="middlename" placeholder="Middlename" required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex">
+                            <div>
+                            <label for="surname">Stree/Subdiv/Sitio </label>
+                                <input class="inputC" type="text" name="surname" placeholder="Stree/Subdiv/Sitio" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Barangay</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Barangay" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Municipality</label>
+                                <input class="inputC" type="text" name="middlename" placeholder="Municipality" required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex">
+                            <div>
+                            <label for="surname">Province </label>
+                                <input class="inputC" type="text" name="surname" placeholder="Province" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Zipcode</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Zipcode" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Contact No.</label>
+                                <input class="inputC" type="number" name="middlename" placeholder="Contact No." required>
+                            </div>
+                        </div>
+
+                        <div class="inputG" style="display: flex">
+                            <div>
+                            <label for="surname">Place of Birth</label>
+                                <input class="inputC" type="text" name="surname" placeholder="Place of Birth" required>
+                            </div>
+                            <div>
+                            <label for="firstname">Civil Status</label>
+                                <input class="inputC" type="text" name="firstname" placeholder="Civil Status" required>
+                            </div>
+                            <div>
+                            <label for="middlename">Region</label>
+                                <input class="inputC" type="text" name="middlename" placeholder="Region" required>
+                            </div>
+                        </div>
+                        <div class="inputG" style="display: flex">
+                            <div class="inputC">
+                                <label for="start">Date of Birth</label>
+                                <input type="date" id="start" name="trip-start"
+                                    value="2000-01-01"
+                                    min="1900-01-01" max="2050-12-31" style="width: 100%">
+                            </div>
+                            <div class="inputC">
+                            <label for="selectD">Sex</label>
+                            <select class="selectD" style="width: 100%; height: auto; margin-top: 3px; padding: 2px; background-color: transparent; border-radius: 3px">
+                                <option selected>Choose Sex</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-child2-3">
+                    <input class="submitB" id="submitB" type="submit" name="check" value="Submit">
+                </div>
+            </div>
+        </div>
+<!-- Registration Form End -->
+
+<!-- Request Form -->
+<div class="popupReq">
+            <div class="popup-contentReq">
+                <div class="popup-child1-3" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-self: content">
+                    <h1>Request Services Form</h1>
+                    <hr style="width: 100px; background: green; border: 2px solid green; border-radius: 1em">
+                    <label for="selectD">Services for </label>
+                    <select class="selectD" style="width: 100%; height: auto; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px">
+                        <option selected>Choose Services</option>
+                        <option value="1">High Value Crops</option>
+                        <option value="2">Fisherfolks</option>
+                    </select>
+                        <div>
+                        <label for="surname">First Name</label>
+                            <input type="text" name="surname" placeholder="firstname" style="width: 100%; height: auto; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px" required>
+                        </div>
+                        <div>
+                        <label for="firstname">Last Name</label>
+                            <input type="text" name="firstname" placeholder="lastname" style="width: 100%; height: auto; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px" required>
+                        </div>
+                        <div>
+                        <label for="middlename">Phone Number</label>
+                            <input type="text" name="middlename" placeholder="phonenumber" style="width: 100%; height: auto; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px" required>
+                        </div>
+                        <div>
+                        <label for="middlename">Purpose of Request</label>
+                            <textarea name="fillmeUp" id="" cols="60" rows="5">Start writing here...</textarea>
+                            <!-- <input type="message" name="middlename" placeholder="Start writing here..." style="width: 100%; height: 100px; margin-bottom: 20px; padding: 5px; background-color: transparent; border-radius: 3px" required> -->
+                        </div>
+                        <div style="display: flex; justify-content: center">
+                            <input class="submitB" id="submitB" type="submit" name="check" style="width: 30%" value="Submit">
+                        </div>
+                    <a type="button" href="" id="closeB" class="btn btn-success" style="position:absolute; top:0; right:0; text-decoration: none; z-index: 1; cursor: pointer; border-radius: 5em">X</a>
+                </div>
+            </div>
+        </div>
+<!-- Request Form End -->
 
     <section class="supp">
         <div class="container" style="text-align: center;">
@@ -478,8 +739,8 @@ while($row=mysqli_fetch_array($res))
                 </div>
             </div>
         </div>
-        <hr style="width: 1000px; background: green; border: 2px solid white; border-radius: 1em; margin-top: 80px">
-        <div class="contact" id="contact">
+        <hr id="contact" style="width: 1000px; background: green; border: 2px solid green; border-radius: 1em; margin-top: 80px">
+        <div class="contact" id="#">
             <div class="contact-form">
                 <div class="container">
                  <form>
@@ -538,6 +799,40 @@ while($row=mysqli_fetch_array($res))
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
+        function myFunctionAd() {
+            var x = document.getElementById("inPassAd");
+            var y = document.getElementById("hideAd1");
+            var z = document.getElementById("hideAd2");
+
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+
+        function myFunctionPer() {
+            var x = document.getElementById("inPassPer");
+            var y = document.getElementById("hidePer1");
+            var z = document.getElementById("hidePer2");
+
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+
         function myFunction() {
             var x = document.getElementById("inPass");
             var y = document.getElementById("hide1");
@@ -627,16 +922,32 @@ while($row=mysqli_fetch_array($res))
             document.querySelector(".popup-2").style.display = "none";
         })
 
+        document.getElementById("request").addEventListener("click", function(){
+            document.querySelector(".popupReq").style.display = "flex";
+        })
+
         document.getElementById("personnel").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "flex";
-            document.querySelector(".popup-1").style.display = "none";
-            document.querySelector(".popup-2").style.display = "none";
+            document.querySelector(".popupPer").style.display = "flex";
+        })
+
+        document.getElementById("admin").addEventListener("click", function(){
+            document.querySelector(".popupAd").style.display = "flex";
         })
 
         document.getElementById("closeB").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "none";
+            document.querySelector(".popupPer").style.display = "none";
+        })
+        
+        document.getElementById("registerB").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+            document.querySelector(".popup3").style.display = "flex";
         })
 
+        document.getElementById("xB-3").addEventListener("click", function(){
+            document.querySelector(".popup3").style.display = "none";
+            document.querySelector(".popup").style.display = "flex";
+        })
 </script>
 </body>
 </html>
@@ -644,6 +955,22 @@ while($row=mysqli_fetch_array($res))
 html{
     /*filter: invert(0);*/
     scroll-behavior: smooth;
+}
+.inputC{
+    width: 85%; 
+    height: auto; 
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+label {
+    display: block;
+    font-weight: 200;
+    font: 1.5rem 'Fira Sans', sans-serif;
+}
+input, label {
+    margin: .4rem 0;
 }
 body {
 	font-family: 'Poppins', sans-serif;
@@ -682,6 +1009,120 @@ header .carousel-inner .item {
  color: #888;
  font-size: 16px;
 }
+.popupReq{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-contentReq{
+    height: auto;
+    width: 500px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popupAd{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-contentAd{
+    height: auto;
+    width: 500px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popupPer{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-contentPer{
+    height: auto;
+    width: 500px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popup3{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-content3{
+    height: auto;
+    width: 650px;
+    background: white;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+.popIn3{
+    background-color: transparent;
+    margin: 16px auto;
+    display: relative;
+    width: 90%;
+    padding: 8px;
+    margin-left: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+}
 /*POPUP START*/
 .popup{
     background: rgba(0, 0, 0, 0.6);
@@ -689,6 +1130,7 @@ header .carousel-inner .item {
     height: 100%;
     position: fixed;
     top: 0;
+    z-index: 10;
     display: none;
     flex-wrap: wrap;
     justify-content: center;
@@ -745,6 +1187,12 @@ input:focus, textarea:focus, select:focus{
 #hide1{
     display: none;
 }
+#hidePer1{
+    display: none;
+}
+#hideAd1{
+    display: none;
+}
 .popIn{
     background-color: transparent;
     margin: 16px auto;
@@ -756,6 +1204,7 @@ input:focus, textarea:focus, select:focus{
     border-bottom: 2px solid black;
 }
 .popup-1{
+    z-index: 10;
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
@@ -807,6 +1256,7 @@ input:focus, textarea:focus, select:focus{
     border-bottom: 2px solid black;
 }
 .popup-2{
+    z-index: 10;
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
@@ -844,7 +1294,7 @@ input:focus, textarea:focus, select:focus{
 .regB{
     margin-top: 0px;
 }
-.closeB, .loginB, .registerB, .resetB-1, .forB-2{
+.closeB, .loginB, .registerB, .resetB-1, .forB-2, .submitB, .loginPer, .loginAd{
     color: green;
     display: inline;
 	background: white;
@@ -855,7 +1305,7 @@ input:focus, textarea:focus, select:focus{
 	border-radius: 20px;
 	border: 2.5px solid green;
 }
-.closeB:hover, .loginB:hover, .registerB:hover, .resetB-1:hover, .forB-2:hover{
+.closeB:hover, .loginB:hover, .registerB:hover, .resetB-1:hover, .forB-2:hover, .submitB:hover, .loginPer:hover, .loginAd:hover{
     background-color: green;
     border: 2.5px solid white;
     color: white;
@@ -954,6 +1404,9 @@ footer{
     background-color: rgba(0,128,0, 0.8);
     text-align: center;
 }
+.navbar{
+    z-index: 1;
+}
 .navbar-inverse {
 	background-color: transparent;
 	border-color: transparent;
@@ -961,7 +1414,8 @@ footer{
 .navbar-inverse .navbar-brand {
 	color: #fff;
 	font-size: 40px;
-    background: linear-gradient(to left, rgb(0,255,0), rgb(0,128,0));
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.9);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	padding: 40px 15px;
@@ -972,6 +1426,7 @@ footer{
 }
 .navbar-inverse .navbar-nav>li>a {
 	color: #fff;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.9);
     font-weight: 700;
     font-size: 15.3px;
 	text-transform: uppercase;
@@ -987,22 +1442,29 @@ footer{
 	padding-bottom: 250px;
 	font-family: poppins;
 }
+.carousel-caption {
+	padding-bottom: 250px;
+	font-family: poppins;
+}
 .carousel-caption h2 {
 	font-size: 70px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 .carousel-caption h2 span {
-	color: #EDBB00;
+	color: white;
 }
 .carousel-caption a {
-	background: #EDBB00;
+	background: rgba(0, 255, 0, 0.7);
 	padding: 15px 35px;
 	display: inline-block;
 	margin-top: 15px;
 	color: #fff;
 	text-transform: uppercase;
 	border-radius: 25px;
+}
+.carousel-caption h3 {
+    color: rgba(0, 255, 0, 0.7);
 }
 .carousel-control.right {
 	background-image: none;
@@ -1054,9 +1516,10 @@ footer{
   color: white;
   font-family: 'Poppins', sans-serif;
   background-color: transparent;
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.9);
   padding: 14px;
   font-weight: 700;
-  font-size: 15.3px;
+  font-size: 16px;
   border: none;
 }
 

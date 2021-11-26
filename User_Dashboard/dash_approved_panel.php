@@ -4,7 +4,7 @@ include "connection.php";
 ?>
 
 <nav class="navbar navbar-light bg-light bg-primary fixed-top flex-md-nowrap p-50">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-nowrap" href="#" id="dash" style="color: green">Farmers Request Services</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-nowrap" href="#" id="dash" style="color: green">View Farmers Info</a>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="#">
@@ -49,7 +49,7 @@ include "connection.php";
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dash_farmers_request.php" style="color: green">
+                        <a class="nav-link" href="dash_farmers_request.php">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
@@ -65,7 +65,7 @@ include "connection.php";
                         Farmers Registration</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dash_approved_panel.php">
+                        <a class="nav-link" href="dash_approved_panel.php" style="color: green">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
@@ -85,7 +85,7 @@ include "connection.php";
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
                         </svg>
-                        Farmers List</a>
+                            Farmers List</a>
                     </li>
                     <hr style="color: white">
                     <li class="nav-item">
@@ -107,10 +107,76 @@ include "connection.php";
         </div>
     </div>
 
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-child1">
+                <div class="col-md-4 well" id="leftPanel" style="padding: 5px">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <img src="http://lorempixel.com/200/200/abstract/1/" alt="Texto Alternativo" class="img-circle img-thumbnail" style="border-radius: 10em; margin-top: 15px">
+                                    <h2>Jethro Guerrero</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-warning" >
+                                            High Value Crops</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-8 well" id="rightPanel" style="margin-top: 50px;">
+                    <form role="form">
+                        <h2>Farmers profile</h2>
+                        <hr class="colorgraph" style="height: 10px">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="margin: 10px 0 10px;">
+                                <div class="form-group">
+                                    <label for="first_name">Firstname</label>
+                                    <input type="text" name="first_name" id="first_name" class="form-control input-lg" tabindex="1" value="Jethro" style="text-align: center" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="margin: 10px 0 10px;">
+                                <div class="form-group">
+                                <label for="last_name">Lastname</label>
+                                    <input type="text" name="last_name" id="last_name" class="form-control input-lg" tabindex="2" value="Guerrero" style="text-align: center" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin: 10px 0 10px;">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" class="form-control input-lg" tabindex="4" value="jeth2x@yahoo.edu.ph" style="text-align: center" readonly>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="margin: 10px 0 10px;">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="text" name="password" id="password" class="form-control input-lg" tabindex="5" value="red_Pink321" style="text-align: center" readonly>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6" style="margin: 10px 0 10px;">
+                                <div class="form-group">
+                                    <label for="password_confirmation">Sex</label>
+                                    <input type="text" name="password_confirmation" id="password_confirmation" class="form-control input-lg" tabindex="6" value="Male" style="text-align: center" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="colorgraph" style="height: 10px">
+                        <div class="row">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="popup-child2">
+                <a type="button" href="" id="closeB" class="btn btn-success" style="position:absolute; top:0; right:0; text-decoration: none; z-index: 1; cursor: pointer; border-radius: 5em">X</a>
+            </div>
+        </div>
+    </div>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
     <div class="printGrp" style="display: flex; flex-direction: row; gap: 20px; justify-content: flex-end; border: 2px solid green;
          padding: 15px 0 0 0; flex-wrap: wrap; background-color: rgba(0, 128, 0, 0.2)">
-         <h3 style="margin: 0 220px 0 0">Farmers List</h3>
+         <h3 style="margin-right: 220px">Farmers List</h3>
             <div>
                 <label for="middlename">Program: </label>
                    <input class="inputC" type="text" name="middlename" placeholder="Program" required>
@@ -134,13 +200,8 @@ include "connection.php";
                     <th>Last Name</th>
                     <th>First Name</th>
                     <th>Middle Name</th>
-                    <th>Sex</th>
-                    <th>Commodity</th>
-                    <th>Size(HA)</th>
-                    <th>Barangay</th>
-                    <th>Contact Number</th>
-                    <th></th>
-                    <th></th>
+                    <th>Program</th>
+                    <th>Request</th>
                     <!-- <th>Username</th>
                     <th>Password</th>
                     <th>Role</th>
@@ -164,12 +225,7 @@ include "connection.php";
                             echo "<td>"; echo $row["username"]; echo "</td>";
                             echo "<td>"; echo $row["id"]; echo "</td>";
                             echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-success">Accept</button> <?php echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-danger">Decline</button> <?php echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-info">Feedback</button> <?php echo "</td>";
+                            echo "<td>"; ?> <a href="#" id="viewB"><button class="btn btn-success" style="width: 100%">Confirm</button></a><?php echo "</td>";
                             echo "</tr>";
                     }
                     ?>

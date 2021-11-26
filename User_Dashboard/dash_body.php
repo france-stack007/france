@@ -8,9 +8,6 @@ include "connection.php";
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 0 0 20px" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
                 </svg>
@@ -60,11 +57,35 @@ include "connection.php";
                         Farmers Request</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="dash_farmers_reg_request.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Farmers Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dash_approved_panel.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Approved Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dash_add_farmer.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Add Farmer</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="dash_farmers_list.php">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
                         </svg>
-                            Farmers List</a>
+                        Farmers List</a>
                     </li>
                     <hr style="color: white">
                     <li class="nav-item">
@@ -75,8 +96,8 @@ include "connection.php";
                             <div class="dropdown" style="display: inline">
                                 <a href="#" class="dropbtn" style="text-decoration: none; color: white">Settings</a>
                                 <div class="dropdown-content" style="text-align: center">
-                                    <a href="#" id="farmer" class="farmer" style="text-decoration: none; display: block">Change Home Image</a>
-                                    <a href="index_admin.php" class="admin" style="text-decoration: none; display: block">Change Home Content</a>
+                                    <a href="dash_home_imgs.php" id="farmer" class="farmer" style="text-decoration: none; display: block">Change Home Image</a>
+                                    <a href="dash_home_contents.php" class="admin" style="text-decoration: none; display: block">Change Home Content</a>
                                 </div>
                             </div>
                         </a>
@@ -87,19 +108,44 @@ include "connection.php";
     </div>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <h3>Farmers List</h3>
+        <div class="printGrp" style="display: flex; flex-direction: row; gap: 20px; justify-content: flex-end; border: 2px solid green;
+         padding: 15px 0 0 0; flex-wrap: wrap; background-color: rgba(0, 128, 0, 0.2)">
+         <h3 style="margin-right: 130px">Farmers List</h3>
+            <div>
+                <label for="middlename">Program: </label>
+                   <input class="inputC" type="text" name="middlename" placeholder="Program" required>
+            </div>
+            <div>
+                <label for="middlename">Search name: </label>
+                   <input class="inputC" type="text" name="middlename" placeholder="Search name" required>
+            </div>
+            <div>
+                <label for="middlename">Barangay: </label>
+                   <input class="inputC" type="text" name="middlename" placeholder="Barangay" required>
+            </div>
+            <div>
+                <a href="#" id="printB"><button class="btn btn-success" style="margin: 0 10px 10px 0">PRINT</button></a>
+            </div>
+        </div>
         <hr>
         <div class="table-responsive">
             <table class="table table-hover table-sm" id="tableSearch">
                 <thead>
                     <tr>
+                    <th>No.</th>
                     <th>Image</th>
-                    <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Username</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Sex</th>
+                    <th>Commodity</th>
+                    <th>Size(HA)</th>
+                    <th>Barangay</th>
+                    <th>Contact Number</th>
+                    <!-- <th>Username</th>
                     <th>Password</th>
                     <th>Role</th>
-                    <th>Status</th>
+                    <th>Status</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -108,13 +154,20 @@ include "connection.php";
                     while($row=mysqli_fetch_array($res))
                     {
                             echo "<tr>";
-                            echo "<td>"; ?> <img src="<?php echo $row["image"]; ?>" height="100" width="100" style="display: block; margin-left: auto; margin-right: auto"> <?php echo "</td>";
-                            echo "<td>"; echo $row["firstname"]; echo "</td>";
+                            echo "<td>"; echo $row["id"]; echo "</td>";
+                            echo "<td>"; ?> <img src="<?php echo $row["image"]; ?>" height="100" width="100"> <?php echo "</td>";
                             echo "<td>"; echo $row["lastname"]; echo "</td>";
+                            echo "<td>"; echo $row["firstname"]; echo "</td>";
+                            //echo "<td>"; echo $row["username"]; echo "</td>";
+                            //echo "<td>"; echo $row["password"]; echo "</td>";
+                            //echo "<td>"; echo $row["role"]; echo "</td>";
+                            //echo "<td>"; echo $row["status"]; echo "</td>";
                             echo "<td>"; echo $row["username"]; echo "</td>";
-                            echo "<td>"; echo $row["password"]; echo "</td>";
-                            echo "<td>"; echo $row["role"]; echo "</td>";
-                            echo "<td>"; echo $row["status"]; echo "</td>";
+                            echo "<td>"; echo $row["id"]; echo "</td>";
+                            echo "<td>"; echo $row["id"]; echo "</td>";
+                            echo "<td>"; echo $row["id"]; echo "</td>";
+                            echo "<td>"; echo $row["id"]; echo "</td>";
+                            echo "<td>"; echo $row["id"]; echo "</td>";
                             echo "</tr>";
                     }
                     ?>

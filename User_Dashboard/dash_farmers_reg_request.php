@@ -4,7 +4,7 @@ include "connection.php";
 ?>
 
 <nav class="navbar navbar-light bg-light bg-primary fixed-top flex-md-nowrap p-50">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-nowrap" href="#" id="dash" style="color: green">Farmers Request Services</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-nowrap" href="#" id="dash" style="color: green">Farmers Registration Request</a>
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="#">
@@ -49,7 +49,7 @@ include "connection.php";
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dash_farmers_request.php" style="color: green">
+                        <a class="nav-link" href="dash_farmers_request.php">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
@@ -57,7 +57,7 @@ include "connection.php";
                         Farmers Request</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dash_farmers_reg_request.php">
+                        <a class="nav-link" href="dash_farmers_reg_request.php" style="color: green">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin: 0 20px 0 0" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                         <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                         <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
@@ -139,8 +139,6 @@ include "connection.php";
                     <th>Size(HA)</th>
                     <th>Barangay</th>
                     <th>Contact Number</th>
-                    <th></th>
-                    <th></th>
                     <!-- <th>Username</th>
                     <th>Password</th>
                     <th>Role</th>
@@ -167,9 +165,8 @@ include "connection.php";
                             echo "<td>"; echo $row["id"]; echo "</td>";
                             echo "<td>"; echo $row["id"]; echo "</td>";
                             echo "<td>"; echo $row["id"]; echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-success">Accept</button> <?php echo "</td>";
+                            echo "<td>"; ?> <button type="button" class="btn btn-success">Approve</button> <?php echo "</td>";
                             echo "<td>"; ?> <button type="button" class="btn btn-danger">Decline</button> <?php echo "</td>";
-                            echo "<td>"; ?> <button type="button" class="btn btn-info">Feedback</button> <?php echo "</td>";
                             echo "</tr>";
                     }
                     ?>
